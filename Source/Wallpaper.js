@@ -44,6 +44,10 @@ var Wallpaper = new Class({
 		this.element.size = this.element.getSize();
 		this.element.ratio = this.element.size.x / this.element.size.y;
 		this.container = this.element.getParent();
+		if (this.container.getStyle('position') === 'static' && this.container !== document.body) {
+			this.container.setStyle('position', 'relative');
+		}
+		this.element.setStyle('position', 'absolute');
 		return this;
 	},
 

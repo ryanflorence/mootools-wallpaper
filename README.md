@@ -7,6 +7,11 @@ Contains three classes: Wallpaper, Wallpaper.Fit, Wallpaper.Fill.
 - __Wallpaper.Fit__: Like the desktop wallpaper option "fit to window", this will fit an element inside its parent element, maintaining the original aspect ratio.
 - __Wallpaper.Fill__: Like the desktop wallpaper option "fill screen", this will resize the element to fill the entire space of the parent element, while maintaining the original aspect ratio.
 
+Demo
+----
+
+View the demo on [jsFiddle](http://jsfiddle.net/rpflorence/A7VNN/)
+
 Options
 -------
 

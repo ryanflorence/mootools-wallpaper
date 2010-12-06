@@ -1,0 +1,16 @@
+name: Wallpaper
+
+author: rpflo
+
+copyright: "&copy; [Ryan Florence](http://ryanflorence.com)"
+
+description: "Resizes elements to fit or fill a container"
+
+current: 0.1
+
+license: MIT-style license.
+
+sources:
+  - "Source/Wallpaper.js"
+  - "Source/Wallpaper.Fit.js"
+  - "Source/Wallpaper.Fill.js"

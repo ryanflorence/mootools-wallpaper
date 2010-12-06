@@ -1,0 +1,126 @@
+<style>
+
+  body {
+    background: #000;
+  }
+  
+  #stage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+  
+  .demo {
+    position: absolute;
+    overflow: hidden;
+  }
+  
+  .demo:nth-child(1) {
+    left: 0px;
+    top: 0px;
+    bottom: 50%;
+    width: 50%;
+  }
+  
+  .demo:nth-child(2) {
+    top: 0;
+    width: 50%;
+    right: 0;
+    height: 50%;
+    z-index: 2;
+  }
+  
+  .demo:nth-child(3) {
+    left: 0;
+    height: 50%;
+    bottom: 0;
+    width: 50%;
+  }
+
+  .demo:nth-child(4) {
+    width: 50%;
+    height: 50%;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .inner {
+    position: absolute;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  p {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    background: #000;
+  }
+  
+</style>
+
+<div id=stage>
+  <div class=demo>
+    <div class=inner style="width:1479px; height:1078px;">
+      <img src="http://images.apple.com/macbookair/images/zoom-view-slide-5_1920.jpg">
+    </div>
+    <p>top left</p>
+  </div>
+
+  <div class=demo>
+    <div class=inner style="width:1870px; height:674px;">
+      <img src="http://images.apple.com/macbookair/images/zoom-view-slide-3_1920.jpg">
+    </div>
+    <p>center center</p>
+  </div>
+
+  <div class=demo>
+    <div class=inner style="width: 1024px; height: 903px">
+      <img src="http://images.apple.com/macbookair/images/zoom-view-slide-4_1024.jpg">
+    </div>
+    <p>center bottom</p>
+  </div>
+
+  <div class=demo>
+    <div class=inner style="width:1698px; height:1013px;">
+      <img src="http://images.apple.com/macbookair/images/zoom-view-slide-7_1920.jpg">
+    </div>
+    <p>bottom right</p>
+  </div>  
+</div>
+
+
+<script src="/depender/build?require=Wallpaper/Fit,Core/Element.Event"></script>
+
+<script>
+
+  window.addEvent('load', function(){
+    
+    var elements = $$('.inner');
+    
+    new Wallpaper.Fit(elements[0], {
+      anchor: { x: 'left', y: 'top' }
+    });
+    
+    new Wallpaper.Fit(elements[1], {
+      anchor: { x: 'center', y: 'center' }
+    });
+    
+    new Wallpaper.Fit(elements[2], {
+      anchor: { x: 'center', y: 'bottom' }
+    });
+    
+    new Wallpaper.Fit(elements[3], {
+      anchor: { x: 'right', y: 'bottom' }
+    });
+    
+
+  });
+</script>

@@ -28,7 +28,7 @@ How to use
 ### HTML
 
     <div id=container>
-      <img id=element src="images.jpg">
+      <img id=element src="image.jpg">
     </div>
 
 ### CSS
@@ -36,9 +36,9 @@ How to use
     #container {
       position: absolute;
       left: 0;
-      width: 100%
+      right: 0;
       top: 0;
-      height: 100%
+      bottom: 0;
       overflow: hidden;
     }
     
@@ -55,7 +55,12 @@ Typically your container element will adjust with the window size.  It also make
 
 The JavaScript is easy.
 
-    new Wallpaper('element');
+    new Wallpaper.Fit('element', {
+      anchor: {x: 'center', y: 'top'}
+    });
+    new Wallpaper.Fill('element',{
+      anchor: {x: 'center', y: 'center'}
+    });
 
 If you're using images, and not declaring their height and width, you should ... alternatively, create your instance after the page has loaded.
 
